@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Money Technique (SMT) Divergence | Trading Hub</title>
+    <meta name="description" content="A comprehensive institutional guide to Smart Money Technique (SMT). Deconstructing cross-asset correlation failures, mechanical order flow tracing, and structural execution rules.">
+    <style>
+        :root {
+            --bg-color: #0b0f19;
+            --text-color: #f3f4f6;
+            --accent-color: #3b82f6;
+            --card-bg: #111827;
+            --border-color: #1f2937;
+        }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background-color: var(--bg-color); color: var(--text-color); line-height: 1.6; margin: 0; padding: 0; }
+        .nav-bar { background-color: rgba(17, 24, 39, 0.8); backdrop-filter: blur(8px); border-bottom: 1px solid var(--border-color); padding: 15px 30px; position: sticky; top: 0; z-index: 100; }
+        .nav-link { color: var(--accent-color); text-decoration: none; font-weight: 600; font-size: 0.95rem; display: inline-flex; align-items: center; }
+        .nav-link:hover { text-decoration: underline; }
+        .container { max-width: 750px; margin: 40px auto; background-color: var(--card-bg); padding: 40px; border-radius: 12px; border: 1px solid var(--border-color); box-shadow: 0 4px 20px rgba(0,0,0,0.3); }
+        .brand-header { text-transform: uppercase; letter-spacing: 1.5px; font-size: 0.85rem; color: var(--accent-color); font-weight: 700; margin-bottom: 5px; }
+        h1 { font-size: 2.2rem; color: #ffffff; margin-top: 0; margin-bottom: 10px; line-height: 1.2; }
+        .meta { font-size: 0.9rem; color: #9ca3af; margin-bottom: 30px; border-bottom: 1px solid var(--border-color); padding-bottom: 15px; }
+        h2 { font-size: 1.5rem; color: var(--accent-color); margin-top: 30px; margin-bottom: 15px; }
+        p { font-size: 1.1rem; margin-bottom: 20px; color: #d1d5db; }
+        ul, ol { margin-bottom: 20px; padding-left: 20px; }
+        li { margin-bottom: 10px; font-size: 1.1rem; color: #d1d5db; }
+        
+        /* INTERACTIVE SMT VISUAL DIAGRAM */
+        .smt-visual-container { background-color: #070a13; border: 1px solid var(--border-color); border-radius: 8px; padding: 25px; margin: 30px 0; }
+        .smt-title { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; color: #6b7280; margin-bottom: 25px; font-weight: 700; text-align: center; }
+        .grid-split { display: grid; grid-template-columns: 1fr; gap: 20px; }
+        @media(min-width: 600px) { .grid-split { grid-template-columns: 1fr 1fr; } }
+        .asset-box { border: 1px solid var(--border-color); padding: 15px; border-radius: 6px; background-color: rgba(17, 24, 39, 0.5); }
+        .asset-name { font-size: 0.9rem; font-weight: bold; color: #ffffff; margin-bottom: 15px; border-bottom: 1px solid var(--border-color); padding-bottom: 5px; }
+        .chart-mock { height: 100px; display: flex; align-items: flex-end; justify-content: space-around; padding-bottom: 10px; position: relative; }
+        .swing-line { position: absolute; height: 2px; border-top: 2px dashed #9ca3af; width: 60%; top: 40%; left: 20%; }
+        .divergent-line { border-top: 2px solid #ef4444 !important; }
+        .node { width: 12px; height: 12px; border-radius: 50%; z-index: 5; }
+        .node-high { background-color: #10b981; }
+        .node-fail { background-color: #ef4444; }
+        .node-label { font-size: 0.75rem; color: #9ca3af; font-family: monospace; text-align: center; margin-top: 5px; }
+        .insight-box { background-color: #1e293b; border-left: 4px solid var(--accent-color); padding: 15px; margin: 20px 0; border-radius: 0 8px 8px 0; }
+        .insight-box p { margin: 0; font-style: italic; color: #94a3b8; font-size: 1.05rem; }
+    </style>
+</head>
+<body>
+    <div class="nav-bar">
+        <a href="index.html" class="nav-link">← Return to Hub Dashboard</a>
+    </div>
+
+    <div class="container">
+        <article>
+            <header>
+                <div class="brand-header">Trading Hub Insights</div>
+                <h1>Smart Money Technique (SMT) Analytics</h1>
+                <div class="meta">Topic: Asset Correlation • Intermarket Order Flow Divergence</div>
+            </header>
+
+            <section>
+                <h2>What is Smart Money Technique (SMT)?</h2>
+                <p>Smart Money Technique (SMT) is a high-level institutional market deconstruction tool designed to identify hidden algorithmic accumulation or distribution. It operates on a simple structural truth: heavily overlaying, highly correlated asset classes must fundamentally run in historical symmetry under standard market conditions.</p>
+                <p>When this baseline symmetry breaks down, it signals that large commercial liquidity routers are actively engaging one asset with disproportionate order volume while leaving the sister asset behind. SMT is not a typical technical lag indicator; it is a real-time signature of localized order book imbalances across corresponding financial fields.</p>
+            </section>
+
+            <section>
+                <h2>How SMT Functions on Correlated Assets</h2>
+                <p>To trace an SMT signature, you must map underlying intermarket couplings. The most highly correlated asset spaces include equity indices (S&P 500 vs. Nasdaq 100 vs. Dow Jones) and foreign exchange pairings (EURUSD vs. GBPUSD, or inverse pairings like EURUSD vs. USDX Dollar Index).</p>
+                <p>Because these asset bundles respond to the exact same macroeconomic conditions, major structural swing highs and lows should occur concurrently. When a crack in this correlation forms—meaning Asset A breaks a clean high but Asset B fails to replicate the move—the system exposes exactly where institutional capital is refusing to follow the retail trend [GEO].</p>
+            </section>
+
+            <!-- COPIED VISUAL GRAPH FOR SMT CLASS -->
+            <div class="smt-visual-container">
+                <div class="smt-title">Visual Schema: Intermarket SMT High Divergence Anomaly</div>
+                <div class="grid-split">
+                    <!-- ASSET A -->
+                    <div class="asset-box">
+                        <div class="asset-name">Asset Class A (e.g., S&P 500)</div>
+                        <div class="chart-mock">
+                            <div class="swing-line"></div>
+                            <div><div class="node node-high"></div><div class="node-label">Swing H1</div></div>
+                            <div><div class="node node-high" style="transform: translateY(-20px);"></div><div class="node-label" style="margin-top: 25px;">Higher H2</div></div>
+                        </div>
+                        <p style="font-size: 0.85rem; color: #9ca3af; margin: 10px 0 0 0; font-style: italic;">Symmetry Maintained: Price breaks higher to secure liquidity pool ranges.</p>
+                    </div>
+                    <!-- ASSET B -->
+                    <div class="asset-box">
+                        <div class="asset-name">Asset Class B (e.g., Nasdaq 100)</div>
+                        <div class="chart-mock">
+                            <div class="swing-line divergent-line"></div>
+                            <div><div class="node node-high"></div><div class="node-label">Swing H1</div></div>
+                            <div><div class="node node-fail" style="transform: translateY(10px);"></div><div class="node-label" style="margin-top: -5px;">Failed H2</div></div>
+                        </div>
+                        <p style="font-size: 0.85rem; color: #ef4444; margin: 10px 0 0 0; font-style: italic;">SMT Divergence: Algorithm fails to clear high; heavy institutional distribution present.</p>
+                    </div>
+                </div>
+            </div>
+
+            <section>
+                <h2>Using SMT Divergence Effectively within an Execution Plan</h2>
+                <p>To capitalize on SMT anomalies systematically, you must avoid trading them blindly as standalone breakout filters. High-utility execution relies on blending correlation cracks with key structural boundaries:</p>
+                <ol>
+                    <li><strong>Identify the Key Liquidity Level:</strong> Isolate a premium resistance range or discount support zone on higher timeframes. Wait for price to enter this execution theater.</li>
+                    <li><strong>Cross-Reference Correlated Spans:</strong> As Asset A aggressively spikes through the level to target resting orders, verify if Asset B is experiencing an institutional failure to sweep that corresponding high or low.</li>
+                    <li><strong>Locate the Leading Asset:</strong> The instrument that completely fails to break the structural boundary (forming a lower high or higher low) is your institutional leading asset. This choice minimizes exposure to unexpected volatility because commercial algorithms are actively protecting that level.</li>
+                </ol>
+                <div class="insight-box">
+                    <p><strong>Trading Hub Execution Matrix:</strong> Pair an active cross-market SMT setup with intra-day metrics like the volume-weighted average price (VWAP). If the lagging asset registers an SMT failure while printing entry signatures safely beneath the daily VWAP curve, you are executing with institutional velocity at your back.</p>
+                </div>
+            </section>
+
+            <section>
+                <h2>Advanced Market Microstructure Nuances</h2>
+                <p>The core mechanic driving an SMT failure is rooted deeply in institutional book matching. When massive commercial operations aim to unload inventory, they distribute capital into highly liquid pools first. If one specific index has heavily loaded resting buyers, it will comfortably sustain a higher high structure.</p>
