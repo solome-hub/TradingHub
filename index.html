@@ -9,7 +9,8 @@
         :root {
             --bg-color: #0b0f19;
             --text-color: #f3f4f6;
-            --accent-color: #3b82f6;
+            --accent-blue: #3b82f6;
+            --accent-green: #10b981;
             --card-bg: #111827;
             --border-color: #1f2937;
         }
@@ -22,134 +23,136 @@
             padding: 20px;
         }
         .container {
-            max-width: 750px;
-            margin: 40px auto;
-            background-color: var(--card-bg);
-            padding: 40px;
-            border-radius: 12px;
-            border: 1px solid var(--border-color);
-            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+            max-width: 800px;
+            margin: 60px auto;
+            padding: 0 20px;
         }
-        .brand-header {
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            font-size: 0.85rem;
-            color: var(--accent-color);
-            font-weight: 700;
-            margin-bottom: 5px;
-        }
-        h1 {
-            font-size: 2.2rem;
-            color: #ffffff;
-            margin-top: 0;
-            margin-bottom: 10px;
-            line-height: 1.2;
-        }
-        .meta {
-            font-size: 0.9rem;
-            color: #9ca3af;
-            margin-bottom: 30px;
+        header {
+            text-align: center;
+            margin-bottom: 50px;
             border-bottom: 1px solid var(--border-color);
-            padding-bottom: 15px;
+            padding-bottom: 30px;
         }
-        h2 {
-            font-size: 1.5rem;
-            color: var(--accent-color);
-            margin-top: 30px;
+        .brand-logo {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #ffffff;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin: 0 0 10px 0;
+        }
+        .brand-tagline {
+            color: #9ca3af;
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .grid-title {
+            font-size: 1.3rem;
+            color: #ffffff;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        .article-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 25px;
+        }
+        @media(min-width: 650px) {
+            .article-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.2s ease, border-color 0.2s ease;
+            text-decoration: none;
+            color: inherit;
+        }
+        .card:hover {
+            transform: translateY(-4px);
+            border-color: #374151;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+        }
+        .tag {
+            align-self: flex-start;
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            padding: 4px 10px;
+            border-radius: 4px;
             margin-bottom: 15px;
         }
-        p {
-            font-size: 1.1rem;
-            margin-bottom: 20px;
-            color: #d1d5db;
+        .tag-blue { background-color: rgba(59, 130, 246, 0.15); color: var(--accent-blue); }
+        .tag-green { background-color: rgba(16, 185, 129, 0.15); color: var(--accent-green); }
+        
+        .card h2 {
+            font-size: 1.4rem;
+            color: #ffffff;
+            margin: 0 0 12px 0;
+            line-height: 1.3;
         }
-        ul, ol {
-            margin-bottom: 20px;
-            padding-left: 20px;
+        .card p {
+            font-size: 1rem;
+            color: #9ca3af;
+            margin: 0 0 20px 0;
+            flex-grow: 1;
         }
-        li {
-            margin-bottom: 10px;
-            font-size: 1.1rem;
-            color: #d1d5db;
+        .read-more {
+            font-size: 0.95rem;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
         }
-        .placeholder-box {
-            background-color: #1e293b;
-            border-left: 4px solid var(--accent-color);
-            padding: 15px;
-            margin: 20px 0;
-            border-radius: 0 8px 8px 0;
+        .card:hover .read-more {
+            text-decoration: underline;
         }
-        .placeholder-box p {
-            margin: 0;
-            font-style: italic;
-            color: #94a3b8;
-        }
+        .blue-text { color: var(--accent-blue); }
+        .green-text { color: var(--accent-green); }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <article>
-            <header>
-                <div class="brand-header">Trading Hub Insights</div>
-                <h1>Understanding VWAP: Market Dynamics and Trading Bias</h1>
-                <div class="meta">
-                    Topic: Technical Analysis • Operational Framework
-                </div>
-            </header>
+        <header>
+            <div class="brand-logo">Trading Hub</div>
+            <p class="brand-tagline">Analyzing institutional order flow, structural mechanics, advanced indicators, and core financial theories, with deep dives into quantitative execution tools and much more.</p>
+        </header>
 
-            <section>
-                <h2>What is VWAP (Volume-Weighted Average Price)?</h2>
-                <p>VWAP represents the true average price of an asset based on both transaction volume and price action throughout the day. Institutional traders rely on this metric as a primary benchmark to determine fair market value and optimize execution efficiency.</p>
-                
-                <div class="placeholder-box">
-                    <!-- ADD YOUR CONTENT HERE -->
-                    <p>[Optional: Add a brief overview of why you use VWAP or your personal experience tracking it here.]</p>
-                </div>
-            </section>
+        <main>
+            <div class="grid-title">Educational Frameworks</div>
+            
+            <div class="article-grid">
+                <!-- CARD 1: VWAP -->
+                <a href="vwap.html" class="card">
+                    <div>
+                        <div class="tag tag-blue">Indicators</div>
+                        <h2>Understanding VWAP: Dynamics & Bias</h2>
+                        <p>Analyze how volume-weighted price models determine institutional fair value shifts above and below the curve.</p>
+                    </div>
+                    <div class="read-more blue-text">Explore Guide →</div>
+                </a>
 
-            <section>
-                <h2>Price Action Beneath the VWAP (Bearish Bias)</h2>
-                <p>When the price trades below the daily VWAP line, it indicates a bearish market sentiment, signaling that sellers are maintaining structural control over price action.</p>
-                <ul>
-                    <li><strong>Institutional Perspective:</strong> The asset is considered undervalued or cheap for the day. Large institutions looking to accumulate long positions prefer to buy beneath VWAP to secure a better-than-average entry price.</li>
-                    <li><strong>Retail Trading Context:</strong> Momentum traders typically favor short setups or avoid aggressive buying, as the VWAP line often transitions into a robust overhead resistance level.</li>
-                </ul>
-
-                <div class="placeholder-box">
-                    <!-- ADD YOUR CONTENT HERE -->
-                    <p>[Optional: Add your personal rules or strategies for taking short trades beneath the VWAP here.]</p>
-                </div>
-            </section>
-
-            <section>
-                <h2>Price Action Above the VWAP (Bullish Bias)</h2>
-                <p>When the price establishes itself above the daily VWAP line, it marks a bullish market sentiment, proving that aggressive buyers are pushing the price higher than the daily volume-weighted average.</p>
-                <ul>
-                    <li><strong>Institutional Perspective:</strong> The asset is considered overvalued or expensive. Institutions attempting to distribute or unwind substantial long positions prefer executing orders above VWAP to maximize profit margins.</li>
-                    <li><strong>Retail Trading Context:</strong> Trend-following and momentum traders heavily target long (buy) entry setups, using pullbacks toward the line as high-probability dynamic support floors.</li>
-                </ul>
-
-                <div class="placeholder-box">
-                    <!-- ADD YOUR CONTENT HERE -->
-                    <p>[Optional: Add your personal rules or strategies for buying pullbacks above the VWAP here.]</p>
-                </div>
-            </section>
-
-            <section>
-                <h2>Key Mechanical Principles for Traders</h2>
-                <p>To utilize this tool effectively within an execution strategy, traders should monitor two primary market phenomena:</p>
-                <ol>
-                    <li><strong>Mean Reversion (The Rubber Band Effect):</strong> The further a price aggressively stretches away from the VWAP line, the higher the mathematical probability that it will snap back to the average to establish equilibrium.</li>
-                    <li><strong>The Breakout Signal:</strong> A decisive, high-volume candle piercing through the VWAP line from below often serves as an early structural indicator of an impending shift from a bearish to a bullish market regime.</li>
-                </ol>
-
-                <div class="placeholder-box">
-                    <!-- ADD YOUR CONTENT HERE -->
-                    <p>[Optional: Add a concluding summary or link your 1.51 Risk-to-Reward ratio matrix rules here.]</p>
-                </div>
-            </section>
-        </article>
+                <!-- CARD 2: SUPPORT & RESISTANCE -->
+                <a href="support-resistance.html" class="card">
+                    <div>
+                        <div class="tag tag-green">Market Structure</div>
+                        <h2>Retail vs. Institutional Liquidity</h2>
+                        <p>Contrast traditional horizontal price floors against institutional structural order execution and depth metrics.</p>
+                    </div>
+                    <div class="read-more green-text">Explore Guide →</div>
+                </a>
+            </div>
+        </main>
     </div>
 
 </body>
