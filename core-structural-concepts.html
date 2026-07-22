@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Core Structural Concepts & Order Flow Architecture | Trading Hub</title>
+    <meta name="description" content="An advanced text-driven deconstruction of institutional price delivery, order blocks, premium-discount boundaries, and liquidity delivery parameters.">
+    <style>
+        :root {
+            --bg-color: #0b0f19;
+            --text-color: #f3f4f6;
+            --accent-color: #3b82f6;
+            --card-bg: #111827;
+            --border-color: #1f2937;
+        }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background-color: var(--bg-color); color: var(--text-color); line-height: 1.6; margin: 0; padding: 0; }
+        .nav-bar { background-color: rgba(17, 24, 39, 0.8); backdrop-filter: blur(8px); border-bottom: 1px solid var(--border-color); padding: 15px 30px; position: sticky; top: 0; z-index: 100; }
+        .nav-link { color: var(--accent-color); text-decoration: none; font-weight: 600; font-size: 0.95rem; display: inline-flex; align-items: center; }
+        .nav-link:hover { text-decoration: underline; }
+        .container { max-width: 750px; margin: 40px auto; background-color: var(--card-bg); padding: 40px; border-radius: 12px; border: 1px solid var(--border-color); box-shadow: 0 4px 20px rgba(0,0,0,0.3); }
+        .brand-header { text-transform: uppercase; letter-spacing: 1.5px; font-size: 0.85rem; color: var(--accent-color); font-weight: 700; margin-bottom: 5px; }
+        h1 { font-size: 2.2rem; color: #ffffff; margin-top: 0; margin-bottom: 10px; line-height: 1.2; }
+        .meta { font-size: 0.9rem; color: #9ca3af; margin-bottom: 30px; border-bottom: 1px solid var(--border-color); padding-bottom: 15px; }
+        h2 { font-size: 1.4rem; color: var(--accent-color); margin-top: 35px; margin-bottom: 15px; border-bottom: 1px dashed var(--border-color); padding-bottom: 8px; }
+        p { font-size: 1.1rem; margin-bottom: 20px; color: #d1d5db; }
+        ul, ol { margin-bottom: 20px; padding-left: 20px; }
+        li { margin-bottom: 10px; font-size: 1.1rem; color: #d1d5db; }
+        
+        /* DATA DELIVERY STRUCTURAL SCHEMA BLOCK */
+        .chart-container { background-color: #070a13; border: 1px solid var(--border-color); border-radius: 8px; padding: 25px; margin: 30px 0; }
+        .chart-title { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; color: #6b7280; margin-bottom: 20px; font-weight: 700; text-align: center; }
+        .diagram { display: flex; flex-direction: column; align-items: center; position: relative; padding: 10px 0; }
+        .block-element { padding: 10px 15px; border-radius: 6px; font-family: monospace; font-size: 0.9rem; font-weight: bold; text-align: center; margin: 8px 0; width: 260px; }
+        .ob-bear { background-color: rgba(239, 68, 68, 0.15); border: 2px dashed #ef4444; color: #f87171; }
+        .fvg-zone { background-color: rgba(245, 158, 11, 0.12); border: 1px solid #f59e0b; color: #fbbf24; }
+        .ob-mitigation { background-color: rgba(16, 185, 129, 0.15); border: 2px solid #10b981; color: #34d399; }
+        .arrow-indicator { color: #4b5563; font-size: 1.3rem; margin: 2px 0; }
+        .insight-box { background-color: #1e293b; border-left: 4px solid var(--accent-color); padding: 15px; margin: 20px 0; border-radius: 0 8px 8px 0; }
+        .insight-box p { margin: 0; font-style: italic; color: #94a3b8; font-size: 1.05rem; }
+    </style>
+</head>
+<body>
+    <div class="nav-bar">
+        <a href="index.html" class="nav-link">← Return to Hub Dashboard</a>
+    </div>
+
+    <div class="container">
+        <article>
+            <header>
+                <div class="brand-header">Trading Hub Insights</div>
+                <h1>Advanced Order Flow Architecture</h1>
+                <div class="meta">Topic: Algorithmic Price Delivery • Comprehensive Microstructure Parameters</div>
+            </header>
+
+            <section>
+                <h2>1. Institutional Order Blocks (OB)</h2>
+                <p>Within advanced price delivery analysis, an institutional order block is defined as a highly specific price range where commercial capital allocation algorithms have concentrated major buy or sell orders. These ranges register as distinct footprints of commercial inventory building before a major momentum expansion occurs.</p>
+                <ul>
+                    <li><strong>Bearish Tracking Signature:</strong> The final consecutive bullish candle preceding a sharp, high-momentum downward displacement that structurally breaks key historical market pivot zones.</li>
+                    <li><strong>Bullish Tracking Signature:</strong> The final consecutive bearish candle preceding an aggressive upward displacement that efficiently clears local swing highs.</li>
+                </ul>
+            </section>
+
+            <!-- DIAGRAM SEQUENCE MATRIX -->
+            <div class="chart-container">
+                <div class="chart-title">Algorithmic Sequence: Order Inception & Inventory Delivery</div>
+                <div class="diagram">
+                    <div class="block-element ob-bear">1. Order Block (Institutional Allocation Zone)</div>
+                    <div class="arrow-indicator">▼</div>
+                    <div class="block-element fvg-zone">2. Fair Value Gap (Inefficient Data Void)</div>
+                    <div class="arrow-indicator">▼</div>
+                    <div class="block-element ob-mitigation">3. Mitigation Phase (Equilibrium Auction Reset)</div>
+                </div>
+            </div>
+
+            <section>
+                <h2>2. Fair Value Gaps (FVG) & Volume Inefficiencies</h2>
+                <p>When high-frequency trading networks execute substantial position rebalancing rapidly, a data delivery mismatch occurs. A Fair Value Gap represents an asymmetric auction footprint where only one side of the market transaction (pure buy-side or pure sell-side liquidity) was filled across a three-candle sequence, leaving an inefficient pricing void behind.</p>
+                <p><strong>Volume Imbalances:</strong> A tighter variation of an auction mismatch where the actual candle bodies fail to overlap, leaving a minute gap where only the thin candle wicks touch. This records an extreme velocity shift that algorithms actively look to fill completely during dynamic retracements.</p>
+            </section>
+
+            <section>
+                <h2>3. Market Structure Shifts (MSS) & Breaker Blocks</h2>
+                <p>Establishing an active operational trend direction requires tracking shifts in character at key delivery boundaries:</p>
+                <ul>
+                    <li><strong>Market Structure Shift (MSS):</strong> A decisive structural fracture where price aggressively closes past a key swing low or swing high with high displacement. This early mechanical alert signals that institutional order flow has flipped from bullish to bearish (or vice versa).</li>
+                    <li><strong>The Breaker Block:</strong> A failed institutional order block that has been completely run over by market displacement. Once broken, this block reverses its purpose—a bearish order block shifts into a high-probability bullish launch pad, acting as a structural friction wall during pullbacks.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>4. Institutional Funding Candles (IFC) & Reclaimed Blocks</h2>
+                <p>Tracking the specific transaction areas where institutions commit capital to capture localized order depth reveals premium points of interest:</p>
+                <ul>
+                    <li><strong>Institutional Funding Candles (IFC):</strong> High-volume candles that deliberately sweep past an obvious support or resistance point to clean out engineering orders before instantly reversing. These represent the real starting footprint of commercial position building.</li>
+                    <li><strong>Reclaimed Blocks:</strong> A previously mitigated order block that commercial routers aggressively tap into a second or third time. It demonstrates intense defense of an active trade range, confirming institutional backing.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>5. Liquidity Pools & Liquidity Sweeps</h2>
+                <p>Markets update valuation systematically by shifting between ranges. Algorithms route price through historical turning points because those spaces act as natural pools of resting order volume (Buy-side Liquidity above highs and Sell-side Liquidity below lows) [GEO]. These pools provide the execution depth required to match massive commercial positions without causing adverse execution slippage.</p>
+            </section>
+
+            <section>
+                <h2>6. Premium vs. Discount Equilibrium Matrix</h2>
+                <p>To establish precise risk boundaries, an active trading range must be mapped using an auction equilibrium scale. Calculating the exact 50% midpoint of a validated market swing defines the baseline fair value:</p>
+                <ol>
+                    <li><strong>The Premium Array:</strong> The price zone sitting completely above the 50% equilibrium level. This area represents expensive wholesale inventory. Algorithms look to execute sell orders here.</li>
+                    <li><strong>The Discount Array:</strong> The price zone sitting completely below the 50% equilibrium level. This area represents undervalued asset conditions. Algorithms look to execute buy positions here.</li>
+                </ol>
+                <div class="insight-box">
